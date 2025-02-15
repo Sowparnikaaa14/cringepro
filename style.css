@@ -1,5 +1,7 @@
 :root {
     --primary-pink: #e91e63;
+    --light-pink: #fce4ec;
+    --lavender: #6b6bd5;
     --secondary-pink: #fce4ec;
     --hover-pink: #d81b60;
     --light-pink: #fff0f3;
@@ -27,56 +29,119 @@ body::after {
     height: 100px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e91e63"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
     background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.8;
+    animation: float 3s ease-in-out infinite;
 }
 
+/* Remove previous decorative elements and keep the container styling */
 .container {
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(233, 30, 99, 0.15);
+    border: 2px solid var(--secondary-pink);
+    max-width: 500px;
+    width: 90%;
 }
+
+/* Remove the ribbon and bow related code */
+/* Keep the rest of your existing styles for h1, label, input, button, etc. */
 
 h1 {
     color: var(--primary-pink);
+    text-shadow: 2px 2px 4px rgba(233, 30, 99, 0.1);
+    margin-bottom: 25px;
 }
 
 label {
     font-size: 18px;
     margin-right: 10px;
+    color: var(--primary-pink);
+    font-weight: bold;
 }
 
 input {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid var(--secondary-pink);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 8px rgba(233, 30, 99, 0.2);
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 16px;
     background-color: var(--primary-pink);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2);
 }
 
 button:hover {
     background-color: var(--hover-pink);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(233, 30, 99, 0.3);
 }
 
 #reasons-container {
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: left;
 }
 
 .reason {
     background-color: var(--secondary-pink);
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 8px;
     font-size: 16px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-pink);
+}
+
+.reason:hover {
+    transform: translateX(5px);
+    background-color: var(--light-pink);
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    input {
+        width: 80%;
+        margin-top: 10px;
+    }
+    
+    body::after {
+        width: 70px;
+        height: 70px;
+        top: 10px;
+        right: 10px;
+    }
 }
