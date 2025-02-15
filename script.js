@@ -31,6 +31,7 @@ const reasonsList = [
     "You’re my sunshine on a cloudy day.",
     "you're my kalipans kanthari",
     "You’re the reason I believe in love.",
+    ""
   ];
   
   function generateReasons() {
