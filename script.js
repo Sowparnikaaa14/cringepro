@@ -1,8 +1,8 @@
 const reasonsList = [
     "YOU'RE MY POOKIE BEAR",
     "you're my vaava",
-    "My Only ONE!"
-    "My man in the dreams"
+    "My Only ONE!",
+    "My man in the dreams",
     "the one who is in my maula mere maula imagination", 
     "I love the way you look at me.",
     "My MAHARAJA",
@@ -18,7 +18,7 @@ const reasonsList = [
     "You make me feel loved and appreciated.",
     "You’re my best friend and my soulmate.",
     "You’re always there for me when I need you.",
-    "My lana del rey's muse"
+    "My lana del rey's muse",
     "You make even the ordinary moments extraordinary.",
     "You’re incredibly thoughtful and caring.",
     "You challenge me to be a better person.",
